@@ -34,3 +34,9 @@
 !/app/assets/builds/.keep
 
 /.idea/*
+
+.env
+
+/coverage.data
+/coverage/
+.DS_Store

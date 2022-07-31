@@ -23,7 +23,8 @@ AllCops:
   DisplayCopNames: true
   Exclude:
     - bin/**/*
-    - db/*
+#    - db/*
     - db/**/*
     - tmp/**/*
     - config/**/*
+  SuggestExtensions: false
