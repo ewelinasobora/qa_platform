@@ -1,0 +1,20 @@
+<div class="w-full">
+  <% if notice.present? %>
+# frozen_string_literal: true
+notice
+ %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Comments</h1>
+# frozen_string_literal: true
+link_to 'New comment', new_comment_path, class: 'rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium'
+ %>
+  </div>
+
+  <div id="comments" class="min-w-full">
+# frozen_string_literal: true
+render @comments
+ %>
+  </div>
+</div>

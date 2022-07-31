@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QAPlatform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <%= render "layouts/navbar" %>
+  <% if notice %>
+    <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+      <p class="font-bold"><%= notice %></p>
+    </div>
+  <% end %>
+  <% if alert %>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold"><%= alert %></strong>
+    </div>
+  <% end %>
+    <main class="md:container min-h-screen md:mx-auto justify-center mt-2 px-20 flex">
+      <%= yield %>
+    </main>
+  <footer class="fixed bottom-0 w-full p-4 bg-white shadow md:flex md:items-center md:justify-between md:p-6 light:bg-gray-800">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 Ewelina Sobora. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+        <a href="https://ewelina.dev" class="mr-4 hover:underline md:mr-6 ">About</a>
+      </li>
+    </ul>
+  </footer>
+  </body>
+</html>

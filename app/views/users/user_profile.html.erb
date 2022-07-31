@@ -1,0 +1,7 @@
+<div>
+  <div class="inline-flex">
+  <%= image_tag(@user.avatar_url) %>
+    <h1 class="font-medium text-7xl ml-4"><%= @user.full_name %></h1>
+  </div>
+  <%= render @user.posts %>
+</div>

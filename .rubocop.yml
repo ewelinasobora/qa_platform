@@ -1,0 +1,29 @@
+require: rubocop-rails
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false # In accordance with the Rails guides.
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+AllCops:
+  TargetRubyVersion: 3.0.0
+  DisplayCopNames: true
+  Exclude:
+    - bin/**/*
+    - db/*
+    - db/**/*
+    - tmp/**/*
+    - config/**/*

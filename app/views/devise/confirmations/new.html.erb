@@ -1,0 +1,29 @@
+<h2>Resend confirmation instructions</h2>
+
+# frozen_string_literal: true
+form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post })
+ do |f| %>
+# frozen_string_literal: true
+render 'devise/shared/error_messages', resource: resource
+ %>
+
+  <div class="field">
+# frozen_string_literal: true
+f.label :email
+ %><br>
+# frozen_string_literal: true
+f.email_field :email, autofocus: true, autocomplete: 'email',
+value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+ %>
+  </div>
+
+  <div class="actions">
+# frozen_string_literal: true
+f.submit 'Resend confirmation instructions'
+ %>
+  </div>
+<% end %>
+
+# frozen_string_literal: true
+render 'devise/shared/links'
+ %>

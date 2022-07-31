@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+@email
+ %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+# frozen_string_literal: true
+@resource.unconfirmed_email
+ %>.</p>
+<% else %>
+# frozen_string_literal: true
+@resource.email
+ %>.</p>
+<% end %>
